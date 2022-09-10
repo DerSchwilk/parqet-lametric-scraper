@@ -9,9 +9,9 @@ def get_json():
         json_data = scrape()
         net_value = get_net_value(json_data)
 
-        template_json['frames'][0]['text'] = str(get_valuation(json_data))
-        template_json['frames'][1]['icon'] = str(get_net_value_icon(net_value))
-        template_json['frames'][1]['text'] = str(net_value)
+        template_json['frames'][1]['text'] = str(get_valuation(json_data))
+        template_json['frames'][3]['icon'] = get_net_value_icon(net_value)
+        template_json['frames'][3]['text'] = str(net_value)
         return template_json
 
 
